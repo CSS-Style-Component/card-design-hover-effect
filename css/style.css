@@ -1,0 +1,110 @@
+
+
+/*========================*/
+/* BASIC SETUP */
+/*========================*/
+
+
+@font-face{
+	src: url('../vendors/fonts/TitilliumWeb-Regular.ttf');
+	font-family: Titillium Web;
+}
+/*all html tag select*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	outline: none;
+}
+/*html tag*/
+html{
+	scroll-behavior: smooth;
+}
+/*body tag*/
+body{
+	font-family: Titillium Web;
+	text-rendering: optimizeLegibility;
+}
+/*list tag*/
+ul li{
+	list-style-type: none;
+}
+/*anchor tag*/
+a{
+	text-decoration: none;
+}
+/*img tag*/
+img{
+	vertical-align: middle;
+}
+
+
+/*=======================*/
+/* REUSABLE COMPONENTS */
+/*=======================*/
+section{
+	padding: 70px 0px;
+}
+
+
+
+
+
+/*=======================*/
+/*Card Section Design*/
+/*=======================*/
+.card-section{
+	width: 100%;
+	background: #262626;
+}
+.card-wrapper{
+	max-width: 70%;
+	margin: auto;
+	display: block;
+}
+.card-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-column-gap: 30px;
+	grid-row-gap: 25px;
+}
+.card-item{
+	background: #333;
+	text-align: center;
+	padding: 25px;
+	box-shadow: 0px 10px 40px rgb(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgb(3,169,244, 0.5);
+	position: relative;
+}
+.card-item::before{
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 0px;
+	background: linear-gradient(rgb(3,169,244, 0.5), rgb(233,30,227, 0.5));
+	transition: 0.5s;
+}
+.card-item:hover:before{
+	height: 100%; 
+	transition: 0.5s;
+}
+.card-item img{
+	max-width: 100%;
+}
+.card-item h3{
+	color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 12px 0px 8px;
+}
+.card-item span{
+	color: #03a9f4;
+}
+.card-item p{
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 7px;
+}
